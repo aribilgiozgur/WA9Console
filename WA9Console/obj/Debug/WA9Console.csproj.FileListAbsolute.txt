@@ -1,0 +1,6 @@
+c:\users\aribilgi\documents\visual studio 2012\Projects\WA9Console\WA9Console\bin\Debug\WA9Console.exe.config
+c:\users\aribilgi\documents\visual studio 2012\Projects\WA9Console\WA9Console\bin\Debug\WA9Console.exe
+c:\users\aribilgi\documents\visual studio 2012\Projects\WA9Console\WA9Console\bin\Debug\WA9Console.pdb
+c:\users\aribilgi\documents\visual studio 2012\Projects\WA9Console\WA9Console\obj\Debug\WA9Console.csprojResolveAssemblyReference.cache
+c:\users\aribilgi\documents\visual studio 2012\Projects\WA9Console\WA9Console\obj\Debug\WA9Console.exe
+c:\users\aribilgi\documents\visual studio 2012\Projects\WA9Console\WA9Console\obj\Debug\WA9Console.pdb

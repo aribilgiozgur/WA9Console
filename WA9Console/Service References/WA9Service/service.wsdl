@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WA9Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WebApplication9.Database" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWA9Service_getAllItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllItems" />
+  </wsdl:message>
+  <wsdl:message name="IWA9Service_getAllItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWA9Service_insertItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertItem" />
+  </wsdl:message>
+  <wsdl:message name="IWA9Service_insertItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWA9Service_testFunction_InputMessage">
+    <wsdl:part name="parameters" element="tns:testFunction" />
+  </wsdl:message>
+  <wsdl:message name="IWA9Service_testFunction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:testFunctionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWA9Service">
+    <wsdl:operation name="getAllItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWA9Service/getAllItems" message="tns:IWA9Service_getAllItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWA9Service/getAllItemsResponse" message="tns:IWA9Service_getAllItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWA9Service/insertItem" message="tns:IWA9Service_insertItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWA9Service/insertItemResponse" message="tns:IWA9Service_insertItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="testFunction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWA9Service/testFunction" message="tns:IWA9Service_testFunction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWA9Service/testFunctionResponse" message="tns:IWA9Service_testFunction_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWA9Service" type="tns:IWA9Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getAllItems">
+      <soap:operation soapAction="http://tempuri.org/IWA9Service/getAllItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertItem">
+      <soap:operation soapAction="http://tempuri.org/IWA9Service/insertItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testFunction">
+      <soap:operation soapAction="http://tempuri.org/IWA9Service/testFunction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WA9Service">
+    <wsdl:port name="BasicHttpBinding_IWA9Service" binding="tns:BasicHttpBinding_IWA9Service">
+      <soap:address location="http://localhost:8733/WA9Service/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
